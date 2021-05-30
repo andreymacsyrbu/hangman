@@ -9,9 +9,10 @@ public class Game {
 
     HangmanStages hangmanStages = new HangmanStages();
 
-
+    // run the game
     public void run() {
         createNumber();
+        showNumber();
         while (running && guessAmount != 0) {
             takeInput();
             checkInput();
@@ -24,11 +25,13 @@ public class Game {
         showNumber();
     }
 
+    // to take input
     public void takeInput() {
         System.out.print("guess the number (0 - 100) : ");
         guess = (new Scanner(System.in)).nextInt();
     }
 
+    // to check the input entered by the player
     public void checkInput() {
         if (guess == number) {
             running = false;
@@ -48,11 +51,13 @@ public class Game {
         }
     }
 
+    // to create a random number
     public void createNumber() {
         Random random = new Random();
         number = random.nextInt(100);
     }
 
+    // to load the hangman stages from the HangmanStages.java
     public void loadHangmanStages() {
         switch (guessAmount) {
     		case 8:
@@ -86,6 +91,7 @@ public class Game {
 
     }
 
+    // to show the number 
     public void showNumber() {
         System.out.println("the number was " + number);
     }
