@@ -1,6 +1,6 @@
-## Getting Started
+## hangman
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+this is a hangman java project
 
 ## Folder Structure
 
